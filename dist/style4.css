@@ -1,0 +1,47 @@
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    " h h h h h h h"
+    " s . . . . . ."
+    " s . . . . . ."
+    " s . . . . . ."
+    " s . . . . . ."
+    " s . . . . . .";
+}
+.headbar {
+    grid-area: h;
+    display:grid;
+    background-color: #2c3ab8;
+    /* grid-template-columns: repeat(7, 1fr); */
+}
+
+.sidebar {
+    width: 100%;
+    overflow-x: hidden;
+    grid-area: s;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: darkturquoise;
+    
+    transition: width 2s;
+}
+font {
+    color: black;
+}
+.head-nav-item{
+    padding-left: 10px;
+    display: grid;
+    align-content: center;
+    color: black;
+    height: 100%;
+}
+.nav-item{
+    color:black;
+    display: grid;
+    align-content: center;
+    color: #ecf0f1;
+    height: 100%;
+}

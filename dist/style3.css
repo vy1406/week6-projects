@@ -1,0 +1,44 @@
+:root {
+    --size: 150px;
+    --ball-color: #022231;
+    --body-color: #249fd3;
+    --box-shadow: #2c3ab8;
+}
+@keyframes halo{
+    from {
+        box-shadow: 0 0 20px 30px var(--box-shadow);
+    }
+    to {
+        box-shadow: 0 0 50px 60px var(--box-shadow);
+    }
+}
+
+
+body{
+    background-color: var(--body-color)
+}
+.myDiv {
+    width: var( --size);
+    height: var( --size);
+    border-radius: 50%;
+    margin-left: 450px;
+    margin-top:150px;
+    background-color: var( --ball-color);
+    transition: background-color 2s;
+    /*Normal Animation commands*/
+    animation-name: halo;
+    animation-duration: 2s;
+    
+    /*iteration-count tells it how many times to repeat*/
+    animation-iteration-count: infinite;
+    
+    /*direction is for which way to go (we use alternate to go back and forth)*/
+    animation-direction: alternate;
+    
+    /*How the animation should "ease" in/out*/
+    animation-timing-function: linear;
+}
+
+div:hover {
+    background-color: red;
+  }
